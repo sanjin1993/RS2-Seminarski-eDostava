@@ -1,0 +1,438 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\EntityFramework.6.3.0-rc1-19458-04\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.3.0-rc1-19458-04\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E37C2266-622A-44C5-B142-DE17F3A434DA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>API_IB120117</RootNamespace>
+    <AssemblyName>API_IB120117</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.3.0-rc1-19458-04\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.3.0-rc1-19458-04\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.ReportViewer.DataVisualization.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.ReportViewer.Design.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.ReportViewer.WebDesign.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.ReportViewer.WinForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3-beta1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLCrypto, Version=2.1.0.0, Culture=neutral, PublicKeyToken=d4421c8a4786956c, processorArchitecture=MSIL">
+      <HintPath>..\packages\PCLCrypto.2.1.32-alpha\lib\net45\PCLCrypto.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.BCrypt, Version=0.5.0.0, Culture=neutral, PublicKeyToken=9e300f9f87f04a7a, processorArchitecture=MSIL">
+      <HintPath>..\packages\PInvoke.BCrypt.0.5.126\lib\net45\PInvoke.BCrypt.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.Kernel32, Version=0.5.0.0, Culture=neutral, PublicKeyToken=9e300f9f87f04a7a, processorArchitecture=MSIL">
+      <HintPath>..\packages\PInvoke.Kernel32.0.5.126\lib\net45\PInvoke.Kernel32.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.NCrypt, Version=0.5.0.0, Culture=neutral, PublicKeyToken=9e300f9f87f04a7a, processorArchitecture=MSIL">
+      <HintPath>..\packages\PInvoke.NCrypt.0.5.126\lib\net45\PInvoke.NCrypt.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.Windows.Core, Version=0.5.0.0, Culture=neutral, PublicKeyToken=9e300f9f87f04a7a, processorArchitecture=MSIL">
+      <HintPath>..\packages\PInvoke.Windows.Core.0.5.126\lib\net35\PInvoke.Windows.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Validation, Version=2.4.0.0, Culture=neutral, PublicKeyToken=2fc06f0d701809a7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Validation.2.4.15\lib\net45\Validation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Models\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\JelaController.cs" />
+    <Compile Include="Controllers\KlijentiController.cs" />
+    <Compile Include="Controllers\KlijentisController.cs" />
+    <Compile Include="Controllers\KomentariController.cs" />
+    <Compile Include="Controllers\KorisniciController.cs" />
+    <Compile Include="Controllers\NarudzbaStavkeController.cs" />
+    <Compile Include="Controllers\NarudzbeController.cs" />
+    <Compile Include="Controllers\NaseljaController.cs" />
+    <Compile Include="Controllers\NaseljaKlijentiController.cs" />
+    <Compile Include="Controllers\OcjeneController.cs" />
+    <Compile Include="Controllers\RestoraniController.cs" />
+    <Compile Include="Controllers\UlogeController.cs" />
+    <Compile Include="Controllers\VelicinaJelaController.cs" />
+    <Compile Include="Controllers\VelicinaJelaTabelaController.cs" />
+    <Compile Include="Controllers\VrsteJelaController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AllJelaPretragaByNaziv_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AllJelaPretragaByVrstaRestoran_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_AllKlijenti_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_AllKomentariOcjene_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_AllNarudzbeDatumi_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_AllNarudzbeStatusDatumi_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_AllNarudzbeStatus_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_AllNarudzbeStavkeByNarudzba_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_AllNarudzbe_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_AllNaselja_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_AllRestoraniByNaziv_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_AllRestoraniLista_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_desktopKorisnickoIme_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_HistorijaNarudzbi2_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_JelaByRestoranIDVrstaIDNazivv_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_JelaByRestoranIDVrstaID_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_JelaByRestoranID_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_JelaZaPretraguAll_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_JeloByID_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_JeloByJeloID2_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_JeloByJeloID_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_KlijentByidMobile_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_KorisniciAllForGrid_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_KorisniciAll_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_KorisnikByID_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_LastJelo_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_LastKlijent2_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_Narudzba_Zadnja_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_Narudzbe_DateOdDateDoREPORT_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_Narudzbe_DateOdDateDo_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_NaseljaAll_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_NaseljeByKlijentIDMobile_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_NaseljeIDByKlijentID_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_PodaciOKlijentuNarudzbeStavkeByNarudzba1_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_PodaciOKlijentuNarudzbeStavkeByNarudzba_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_RestoraniAll_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_RestoraniByID_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_UlogeAll_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_VelicinaJelaAll_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_VelicinaJelaByJeloID_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\esp_VrsteJelaAll_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Jela.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\KlijentByKorisnickoIme1_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Klijenti.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Komentari.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Korisnici.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NarudzbaStavke.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Narudzbe.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Naselja.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NaseljaKlijenti.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Ocjene.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PreporukaRestorana_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Restorani.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Uloge.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VelicinaJela.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VelicinaJelaTabela.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VrsteJela.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Preporuka.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Models\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mobile_IB120117\Mobile_IB120117.Android\Mobile_IB120117.Android.csproj">
+      <Project>{CC540D1E-D0D8-4DF7-9C95-388F63DF04D9}</Project>
+      <Name>Mobile_IB120117.Android</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56258</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:56258/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.3.0-rc1-19458-04\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.3.0-rc1-19458-04\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.3.0-rc1-19458-04\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.3.0-rc1-19458-04\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.3.0-rc1-19458-04\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.3.0-rc1-19458-04\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

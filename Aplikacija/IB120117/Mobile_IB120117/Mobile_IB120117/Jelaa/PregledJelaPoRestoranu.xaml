@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobile_IB120117.Jelaa.PregledJelaPoRestoranu"
+    xmlns:converters="clr-namespace:Mobile_IB120117.Converter"
+              BackgroundImageSource="food.jpg"
+         >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ImageConverter x:Key="imgConv"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Padding="120,30,120,20" VerticalOptions="CenterAndExpand" Style="{StaticResource Container}">
+            <StackLayout Padding="100,0,100,0" BackgroundColor="#90000000">
+                <Label Text="Jela odabranog restorana"
+                 FontAttributes="Bold"  FontSize="Large"
+                 HorizontalOptions="CenterAndExpand" TextColor="#FFFFFFFF" />
+                <Picker x:Name="pickerh" 
+        Title="Odaberite vrstu jela" 
+                        TitleColor="#FFFFFFFF"
+        ItemsSource="{Binding VrsteList}"
+        ItemDisplayBinding="{Binding Naziv}"
+        SelectedItem="{Binding SelectedVrste}"
+                    SelectedIndexChanged="Pickerh_SelectedIndexChanged"/>
+                <Entry x:Name="naziv" Placeholder="Naziv"></Entry>
+                <Button x:Name="Traži" Clicked="Traži_Clicked" Text="Traži" BackgroundColor="#FFFFFFFF"></Button>
+                <ListView x:Name="MenuItemsListView" 
+            SeparatorVisibility="None"
+                          
+            ItemTapped="MenuItemsListView_ItemTapped" 
+                           BackgroundColor="#70000000"
+            HasUnevenRows="true">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout >
+                                    <Grid  BackgroundColor="#50000000" Padding="0,20,0,0">
+                                        <StackLayout Padding="0,5,0,5">
+                                            <Image Grid.Column="0"  Source="{Binding SlikaThumb, Converter={StaticResource imgConv}}" HorizontalOptions="CenterAndExpand" Aspect="AspectFit"></Image>
+                                        </StackLayout>
+
+                                        <StackLayout Grid.Column="1">
+                                            <StackLayout  Padding="0,15,0,0" >
+                                                <Label Text="{Binding Naziv}" TextColor="#9FFFFFFF" FontAttributes="Bold" FontSize="20" />
+                                            </StackLayout>
+                                            <StackLayout   >
+                                                <Label Text="{Binding Opis}" TextColor="#9FFFFFFF" FontAttributes="Bold" />
+                                            </StackLayout>
+                                         
+                                        </StackLayout>
+                                    </Grid>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

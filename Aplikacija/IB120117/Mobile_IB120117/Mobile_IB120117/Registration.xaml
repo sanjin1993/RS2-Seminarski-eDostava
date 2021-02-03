@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                       xmlns:local="clr-namespace:Mobile_IB120117"
+                        BackgroundImageSource="aaaa.jpg"
+             x:Class="Mobile_IB120117.Registration">
+    <ContentPage.Content>
+        <ScrollView Padding="100,30,100,30" BackgroundColor="#50000000" HorizontalOptions="CenterAndExpand">
+        <StackLayout Padding="100,70,100,0" VerticalOptions="CenterAndExpand" Style="{StaticResource Container}" BackgroundColor="#90000000">
+            <Label Text="Registracija"    TextColor="#FFFFFFFF" Padding="0,20,0,20"
+                FontAttributes="Bold"  FontSize="Medium"
+                HorizontalOptions="CenterAndExpand" />
+
+
+            <Label Text="Ime" TextColor="#FFFFFFFF"/>
+            <Label x:Name="ImeError" FontSize="11" TextColor="Red" IsVisible="False"/>
+            <Entry x:Name="inputIme"/>
+
+            <Label Text="Prezime" TextColor="#FFFFFFFF"/>
+            <Label x:Name="PrezimeError" FontSize="11" TextColor="Red" IsVisible="False"/>
+            <Entry x:Name="inputPrezime"/>
+
+            <Label Text="Adresa" TextColor="#FFFFFFFF"/>
+            <Label x:Name="AdresaError" FontSize="11" TextColor="Red" IsVisible="False"/>
+            <Entry x:Name="inputAresa"/>
+
+            <Label Text="Telefon" TextColor="#FFFFFFFF"/>
+            <Label x:Name="TelefonError" FontSize="11" TextColor="Red" IsVisible="False"/>
+            <Entry x:Name="inputTelefon"/>
+            <Picker x:Name="pickerh" 
+        Title="Odaberite naselje" TextColor="#FFFFFFFF"
+        ItemsSource="{Binding NaseljeList}"
+        ItemDisplayBinding="{Binding Naziv}"
+        SelectedItem="{Binding SelectedNaselje}"
+                    SelectedIndexChanged="Pickerh_SelectedIndexChanged"/>
+
+            <Label Text="Username" TextColor="#FFFFFFFF"/>
+            <Label x:Name="UsernameError" FontSize="11" TextColor="Red" IsVisible="False"/>
+            <Entry x:Name="inputUsername" />
+
+            <Label Text="Password" TextColor="#FFFFFFFF"/>
+            <Label x:Name="PasswordError" FontSize="11" TextColor="Red" IsVisible="False"/>
+            <Entry x:Name="inputPasswordReg" IsPassword="True"/>
+
+            <StackLayout  Padding="0,50,0,0">
+                <Button x:Name="btnReg" Text="Registracija" Clicked="BtnReg_Clicked" BackgroundColor="#FFFFFFFF"></Button>
+            </StackLayout>
+        </StackLayout>
+  </ScrollView>  </ContentPage.Content>
+</ContentPage>

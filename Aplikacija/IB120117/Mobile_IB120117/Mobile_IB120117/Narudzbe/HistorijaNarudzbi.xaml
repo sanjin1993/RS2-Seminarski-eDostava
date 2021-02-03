@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                       BackgroundImageSource="aaaa.jpg"
+             x:Class="Mobile_IB120117.Narudzbe.HistorijaNarudzbi"
+             xmlns:converters1="clr-namespace:Mobile_IB120117.Converter">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters1:ImageConverter x:Key="imgConv"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout Padding="150,50,150,50" >
+        <Label Text="Historija narudžbi"
+                   FontSize="Medium"
+                   FontAttributes="Bold"
+               TextColor="#FFFFFFFF"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Padding="10"  BackgroundColor="#90000000" >
+            <ListView x:Name="MenuItemsListView" 
+            SeparatorVisibility="None"
+            HasUnevenRows="true">
+
+                <ListView.ItemTemplate   >
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout HorizontalOptions="CenterAndExpand" >
+                                <Grid Padding="15"  BackgroundColor="#90000000"  >
+
+                                    <Image Grid.Column="0" Source="{Binding SlikaThumb, Converter={StaticResource imgConv}}" HorizontalOptions="CenterAndExpand" Aspect="AspectFit"></Image>
+
+                                    <StackLayout Grid.Column="1"  >
+                                        <StackLayout   >
+                                            <Label          TextColor="#FFFFFFFF"
+                                              HorizontalOptions="EndAndExpand"
+                                    Text="Datum narudžbe" FontAttributes="Bold" />
+                                        </StackLayout>
+                                        <StackLayout >
+                                            <Label HorizontalOptions="EndAndExpand"          TextColor="#FFFFFFFF"
+                                    Text="Naziv jela" FontAttributes="Bold"  />
+                                        </StackLayout>
+                                        <StackLayout >
+                                            <Label HorizontalOptions="EndAndExpand"         TextColor="#FFFFFFFF"
+                                    Text="Opis jela" FontAttributes="Bold"  />
+                                        </StackLayout>
+                                        <StackLayout >
+                                            <Label HorizontalOptions="EndAndExpand"         TextColor="#FFFFFFFF"
+                                    Text="Ukupan iznos" FontAttributes="Bold"  />
+                                        </StackLayout>
+                                        <StackLayout >
+                                            <Label HorizontalOptions="EndAndExpand"         TextColor="#FFFFFFFF"
+                                    Text="Status" FontAttributes="Bold"  />
+                                        </StackLayout>
+                                    </StackLayout>
+                                    <StackLayout Grid.Column="2"  >
+                                        <StackLayout   >
+                                            <Label  
+                                    Text="{Binding DatumNarudzbe}"         TextColor="#FFFFFFFF" />
+                                        </StackLayout>
+                                        <StackLayout >
+
+                                            <Label
+                                    Text="{Binding Naziv}"          TextColor="#FFFFFFFF" />
+                                        </StackLayout>
+                                        <StackLayout >
+
+                                            <Label
+                                    Text="{Binding Opis}"         TextColor="#FFFFFFFF"  />
+                                        </StackLayout>
+                                        <StackLayout >
+
+                                            <Label
+                                    Text="{Binding Iznos}"          TextColor="#FFFFFFFF" />
+                                        </StackLayout>
+                                        <StackLayout >
+
+                                            <Label         TextColor="#FFFFFFFF"
+                                    Text="{Binding StatusNarudzbe}"  />
+                                        </StackLayout>
+                                    </StackLayout>
+
+                                </Grid>
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

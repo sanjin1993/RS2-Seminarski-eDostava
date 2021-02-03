@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7fd65859c7e34700a1ce87e2e2ae40f3" Name="Diagram1">
+        <EntityTypeShape EntityType="IB120117Model.Jela" Width="1.5" PointX="8.5" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="IB120117Model.Klijenti" Width="1.5" PointX="8.5" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="IB120117Model.Komentari" Width="1.5" PointX="10.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="IB120117Model.Korisnici" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="IB120117Model.NarudzbaStavke" Width="1.5" PointX="13.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IB120117Model.Narudzbe" Width="1.5" PointX="11.5" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="IB120117Model.Naselja" Width="1.5" PointX="0.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="IB120117Model.NaseljaKlijenti" Width="1.5" PointX="6" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="IB120117Model.Ocjene" Width="1.5" PointX="10.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="IB120117Model.Restorani" Width="1.5" PointX="5.25" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="IB120117Model.Uloge" Width="1.5" PointX="0.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="IB120117Model.VelicinaJela" Width="1.5" PointX="11.5" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="IB120117Model.VelicinaJelaTabela" Width="1.5" PointX="10.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="IB120117Model.VrsteJela" Width="1.5" PointX="6.25" PointY="7.25" IsExpanded="true" />
+        <AssociationConnector Association="IB120117Model.FK__Jela__KorisnikID__31B762FC" ManuallyRouted="false" />
+        <AssociationConnector Association="IB120117Model.FK__Jela__RestoranID__32AB8735" ManuallyRouted="false" />
+        <AssociationConnector Association="IB120117Model.FK__Jela__VrsteJelaI__339FAB6E" ManuallyRouted="false" />
+        <AssociationConnector Association="IB120117Model.FK__Komentari__JeloI__3E1D39E1" ManuallyRouted="false" />
+        <AssociationConnector Association="IB120117Model.FK__NarudzbaS__JeloI__45BE5BA9" ManuallyRouted="false" />
+        <AssociationConnector Association="IB120117Model.FK__Ocjene__JeloID__3A4CA8FD" ManuallyRouted="false" />
+        <AssociationConnector Association="IB120117Model.FK__VelicinaJ__JeloI__37703C52" ManuallyRouted="false" />
+        <AssociationConnector Association="IB120117Model.FK__Komentari__Klije__3F115E1A" ManuallyRouted="false" />
+        <AssociationConnector Association="IB120117Model.FK__Narudzbe__Klijen__41EDCAC5" ManuallyRouted="false" />
+        <AssociationConnector Association="IB120117Model.FK__NaseljaKl__Klije__5BAD9CC8" ManuallyRouted="false" />
+        <AssociationConnector Association="IB120117Model.FK__Ocjene__KlijentI__3B40CD36" ManuallyRouted="false" />
+        <AssociationConnector Association="IB120117Model.FK__Korisnici__Nasel__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="IB120117Model.FK__Korisnici__Uloga__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="IB120117Model.FK__Restorani__Koris__498EEC8D" ManuallyRouted="false" />
+        <AssociationConnector Association="IB120117Model.FK__NarudzbaS__Narud__44CA3770" ManuallyRouted="false" />
+        <AssociationConnector Association="IB120117Model.FK__NarudzbaS__Velic__2334397B" ManuallyRouted="false" />
+        <AssociationConnector Association="IB120117Model.FK__NaseljaKl__Nasel__5AB9788F" ManuallyRouted="false" />
+        <AssociationConnector Association="IB120117Model.FK__VelicinaJ__Velic__367C1819" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

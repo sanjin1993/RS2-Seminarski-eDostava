@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{08CF7B54-DE24-4525-B2EE-74C89FE972FF}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Mobile_IB120117</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)MainPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Converter\ImageConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Global.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Jelaa\DetaljiJela.xaml.cs">
+      <DependentUpon>DetaljiJela.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Jelaa\OcjenaKomentarJela.xaml.cs">
+      <DependentUpon>OcjenaKomentarJela.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Jelaa\PregledJelaPoRestoranu.xaml.cs">
+      <DependentUpon>PregledJelaPoRestoranu.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Narudzbe\HistorijaNarudzbi.xaml.cs">
+      <DependentUpon>HistorijaNarudzbi.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Narudzbe\TrenutneNarudzbe.xaml.cs">
+      <DependentUpon>TrenutneNarudzbe.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Navigation\MasterDetailPage1.xaml.cs">
+      <DependentUpon>MasterDetailPage1.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Navigation\MasterDetailPage1Detail.xaml.cs">
+      <DependentUpon>MasterDetailPage1Detail.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Navigation\MasterDetailPage1Master.xaml.cs">
+      <DependentUpon>MasterDetailPage1Master.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Navigation\MasterDetailPage1MenuItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Registration.xaml.cs">
+      <DependentUpon>Registration.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Restorani\PregledRestorana.xaml.cs">
+      <DependentUpon>PregledRestorana.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Services\APIServices.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UserProfil.xaml.cs">
+      <DependentUpon>UserProfil.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\vm.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\vmVelicinaJela.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\vmVrsteJela.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UserProfil.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Navigation\MasterDetailPage1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Navigation\MasterDetailPage1Master.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Navigation\MasterDetailPage1Detail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Registration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Restorani\PregledRestorana.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Jelaa\PregledJelaPoRestoranu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Jelaa\DetaljiJela.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Jelaa\OcjenaKomentarJela.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Narudzbe\TrenutneNarudzbe.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Narudzbe\HistorijaNarudzbi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

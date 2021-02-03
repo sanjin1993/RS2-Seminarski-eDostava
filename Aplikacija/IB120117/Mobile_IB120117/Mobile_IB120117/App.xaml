@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobile_IB120117.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!-- GEN. UI ELEMENTS -->
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="#90000000"/>
+                <Setter Property="BarTextColor" Value="White"/>
+            </Style>
+            <!-- LABELS -->
+            <Style x:Key="errorLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="Red"/>
+                <Setter Property="FontSize" Value="11"/>
+            </Style>
+            <Style x:Key="infoLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="Gray"/>
+                <Setter Property="FontSize" Value="14"/>
+            </Style>
+            <Style x:Key="infoLabelBold" TargetType="Label">
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="TextColor" Value="Gray"/>
+                <Setter Property="FontSize" Value="14"/>
+            </Style>
+            <Style x:Key="titleLabel" TargetType="Label">
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="18"/>
+            </Style>
+            <Style x:Key="opisLabel" TargetType="Label">
+                <Setter Property="WidthRequest" Value="650"/>
+            </Style>
+            <Style x:Key="listEmptyLabel" TargetType="Label">
+                <Setter Property="IsVisible" Value="False"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="TextColor" Value="Red"/>
+                <Setter Property="FontSize" Value="14"/>
+            </Style>
+           
+            <!-- BUTTONS AND IMAGEBUTTONS -->
+            <Style x:Key="btnChip" TargetType="Button">
+                <Setter Property="IsEnabled" Value="False"/>
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="CornerRadius" Value="10"/>
+            </Style>
+            <Style x:Key="BtnSmall" TargetType="Button">
+                <Setter Property="FontSize" Value="11"/>
+            </Style>
+            <Style x:Key="Zvjezdica" TargetType="ImageButton">
+                <Setter Property="WidthRequest" Value="15"/>
+            </Style>
+            <Style TargetType="ImageButton">
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+            </Style>
+            <!-- STACKLAYOUTS AND GROUP-VIEWS -->
+            <Style x:Key="napomenaBox" TargetType="StackLayout">
+                <Setter Property="BackgroundColor" Value="Red"/>
+                <Setter Property="Padding" Value="0"/>
+            </Style>
+            <Style x:Key="Container" TargetType="StackLayout">
+                <Setter Property="Margin" Value="5"/>
+                <Setter Property="WidthRequest" Value="750"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+            </Style>
+            <Style x:Key="ScrollContainer" TargetType="ScrollView">
+                <Setter Property="WidthRequest" Value="750"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+            </Style>
+            <Style x:Key="bvDelimiter" TargetType="BoxView">
+                <Setter Property="HeightRequest" Value="1"/>
+                <Setter Property="BackgroundColor" Value="LightGray"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

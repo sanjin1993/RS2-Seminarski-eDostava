@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  BackgroundImageSource="aaaa.jpg"
+             x:Class="Mobile_IB120117.Narudzbe.TrenutneNarudzbe">
+
+        <ContentPage.Content>
+            <StackLayout Padding="250,70,250,50" BackgroundColor="#90000000">
+                <Label Text="Aktivne narudžbe"
+                   FontSize="Medium"
+                       TextColor="#FFFFFFFF"
+                   FontAttributes="Bold"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                <StackLayout Padding="100" BackgroundColor="#90000000" >
+                    <ListView x:Name="MenuItemsListView" 
+            SeparatorVisibility="None"
+                    
+            HasUnevenRows="true">
+
+                        <ListView.ItemTemplate   >
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout HorizontalOptions="CenterAndExpand" >
+                                        <Grid Padding="15" >
+
+                                            <StackLayout Grid.Column="0" Padding="10"  >
+                                                <StackLayout   >
+                                                    <Label
+                                              HorizontalOptions="EndAndExpand" TextColor="#FFFFFFFF"
+                                    Text="Naziv" FontAttributes="Bold" />
+                                                </StackLayout>
+                                                <StackLayout >
+                                                    <Label HorizontalOptions="EndAndExpand" TextColor="#FFFFFFFF"
+                                    Text="Opis" FontAttributes="Bold"  />
+                                                </StackLayout>
+                                                <StackLayout >
+                                                    <Label HorizontalOptions="EndAndExpand" TextColor="#FFFFFFFF"
+                                    Text="Restoran" FontAttributes="Bold"  />
+                                                </StackLayout>
+                                                <StackLayout >
+                                                    <Label HorizontalOptions="EndAndExpand" TextColor="#FFFFFFFF"
+                                    Text="Porcija" FontAttributes="Bold"  />
+                                                </StackLayout>
+                                                <StackLayout >
+                                                    <Label HorizontalOptions="EndAndExpand" TextColor="#FFFFFFFF"
+                                    Text="Cijena" FontAttributes="Bold"  />
+                                                </StackLayout>
+                                              <StackLayout >
+                                                <Label HorizontalOptions="EndAndExpand" TextColor="#FFFFFFFF"
+                                Text="Količina" FontAttributes="Bold"  />
+                                              </StackLayout>
+                                            </StackLayout>
+                                            <StackLayout Grid.Column="1"  Padding="10">
+                                                <StackLayout   >
+                                                    <Label  TextColor="#FFFFFFFF"
+                                    Text="{Binding Naziv}" />
+                                                </StackLayout>
+                                                <StackLayout >
+
+                                                  <Label TextColor="#FFFFFFFF"
+                                  Text="{Binding Opis}"  />
+                                                </StackLayout>
+                                                <StackLayout >
+
+                                                    <Label TextColor="#FFFFFFFF"
+                                    Text="{Binding Restoran}"  />
+                                                </StackLayout>
+                                                <StackLayout>
+                                                    <Label TextColor="#FFFFFFFF"
+                                    Text="{Binding Porcija}"  />
+                                                </StackLayout>
+                                                <StackLayout >
+
+                                                    <Label TextColor="#FFFFFFFF"
+                                    Text="{Binding Cijena}"  />
+                                                </StackLayout>
+                                              <StackLayout >
+
+                                                <Label TextColor="#FFFFFFFF"
+                                Text="{Binding Kolicina}"  />
+                                              </StackLayout>
+                                            </StackLayout>
+                                        </Grid>
+
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    <Label x:Name="IznosLabel" Text="{Binding StringFormat}"></Label>
+                  <StackLayout  Padding="50,20,50,10">
+                    <Button x:Name="Zakljuci" Text="Zaključi narudžbu" Clicked="Zakljuci_Clicked" BackgroundColor="#FFFFFFFF"></Button>
+                  </StackLayout> 
+                </StackLayout>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobile_IB120117.Jelaa.OcjenaKomentarJela"  xmlns:converters="clr-namespace:Mobile_IB120117.Converter"
+              BackgroundImageSource="food.jpg"
+         >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ImageConverter x:Key="imgConv"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout  BackgroundColor="#90000000" VerticalOptions="CenterAndExpand" Style="{StaticResource Container}" HorizontalOptions="CenterAndExpand">
+            <StackLayout Padding="50,10,50,10" BackgroundColor="#90000000" >
+                <Label Text="Detalji jela" FontSize="Medium" TextColor="#FFFFFFFF" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"></Label>
+            </StackLayout>
+            <StackLayout  VerticalOptions="CenterAndExpand" BackgroundColor="#50000000"  HorizontalOptions="CenterAndExpand">
+
+                <StackLayout HorizontalOptions="CenterAndExpand" x:Name="odabranoJeloOcjenaKom">
+                    <Grid Padding="50,10,50,10" >
+                        <Image Grid.Column="0" Grid.Row="0" Source="{Binding SlikaThumb, Converter={StaticResource imgConv}}" HorizontalOptions="CenterAndExpand" Aspect="AspectFit"></Image>
+           
+
+
+                        <StackLayout Grid.Column="1" Grid.Row="0" Margin="10,5,10,5">
+                            <StackLayout   >
+                                <Label  
+                                    Text="{Binding Naziv}" TextColor="#FFFFFFFF"/>
+                            </StackLayout>
+                            <StackLayout   >
+
+                                <Label 
+                                    Text="{Binding Opis}" TextColor="#FFFFFFFF"  Margin="0,0,0,15"/>
+                            </StackLayout>
+                            <StackLayout >
+                                <Label
+                                    Text="{Binding Restoran}" TextColor="#FFFFFFFF" />
+                            </StackLayout>
+
+                            <StackLayout >
+                                <Label
+                                    Text="{Binding Vrsta}" TextColor="#FFFFFFFF" />
+                            </StackLayout>
+                         
+                      
+                        </StackLayout>
+                    </Grid>
+                    <Grid Padding="50,1,50,10" Margin="10" HorizontalOptions="CenterAndExpand" >
+
+                        <StackLayout Grid.Column="0" Grid.Row="0" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                            <ImageButton x:Name="zvjezdica1" Clicked="Zvjezdica1_Clicked"  Style="{StaticResource Zvjezdica}" Source="star.png" />
+                            <ImageButton x:Name="zvjezdica2" Clicked="Zvjezdica2_Clicked" Style="{StaticResource Zvjezdica}" Source="star.png" />
+                            <ImageButton x:Name="zvjezdica3" Clicked="Zvjezdica3_Clicked" Style="{StaticResource Zvjezdica}" Source="star.png" />
+                            <ImageButton x:Name="zvjezdica4" Clicked="Zvjezdica4_Clicked" Style="{StaticResource Zvjezdica}" Source="star.png" />
+                            <ImageButton x:Name="zvjezdica5" Clicked="Zvjezdica5_Clicked" Style="{StaticResource Zvjezdica}" Source="star.png" />
+                        </StackLayout>
+                        <StackLayout Grid.Column="0" Grid.Row="1">
+                            <Grid >
+                        <StackLayout Grid.Column="0" Grid.Row="0" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+
+                            <Label
+                                    Text="Unesite komentar" FontAttributes="Bold" TextColor="#FFFFFFFF" HorizontalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                        <StackLayout Grid.Column="1" Grid.Row="0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                            
+                                <Entry x:Name="inutKomentar"  IsVisible="True" HorizontalOptions="FillAndExpand" />
+                        
+                        </StackLayout></Grid>
+                        </StackLayout>
+                        <StackLayout Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="10,0,10,0">
+
+                            <Button x:Name="Komentiraj" Text="Komentiraj" Clicked="Komentiraj_Clicked" HorizontalOptions="CenterAndExpand" BackgroundColor="#FFFFFFFF"></Button>
+                         
+                             
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

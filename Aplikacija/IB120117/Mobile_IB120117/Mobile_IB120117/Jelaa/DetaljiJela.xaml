@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobile_IB120117.Jelaa.DetaljiJela"
+    xmlns:converters="clr-namespace:Mobile_IB120117.Converter"
+              BackgroundImageSource="food.jpg"
+         >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ImageConverter x:Key="imgConv"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView  Padding="50,10,50,10"  BackgroundColor="#90000000" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" >
+            <StackLayout  BackgroundColor="#90000000" VerticalOptions="CenterAndExpand" Style="{StaticResource Container}" HorizontalOptions="CenterAndExpand">
+                <StackLayout Padding="50,10,50,10" BackgroundColor="#90000000">
+                    <Label Text="Detalji jela" FontSize="Medium" TextColor="#FFFFFFFF" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"></Label>
+                </StackLayout>
+            <StackLayout  VerticalOptions="CenterAndExpand" BackgroundColor="#90000000"  HorizontalOptions="CenterAndExpand">
+
+                <StackLayout HorizontalOptions="CenterAndExpand" x:Name="odabranoJelo"  >
+                    <Grid Padding="50,10,50,10" >
+                        <Image Grid.Column="0" Grid.Row="0" Source="{Binding SlikaThumb, Converter={StaticResource imgConv}}" HorizontalOptions="CenterAndExpand" Aspect="AspectFit"></Image>
+                        <Image Grid.Column="1" Grid.Row="0" Source="starr.png" HorizontalOptions="CenterAndExpand" Aspect="AspectFit">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer
+                Tapped="TapGestureRecognizer_Tapped"
+                NumberOfTapsRequired="1" />
+                            </Image.GestureRecognizers>
+                        </Image>
+
+                        <StackLayout Grid.Column="0" Grid.Row="1" Margin="5">
+                            <StackLayout   >
+                                <Label  
+                                    Text="Naziv" TextColor="#FFFFFFFF" FontAttributes="Bold"  />
+                            </StackLayout>
+                            <StackLayout   >
+
+                                <Label TextColor="#FFFFFFFF" FontAttributes="Bold" 
+                                    Text="Opis"/>
+                            </StackLayout>
+
+                            <StackLayout   >
+
+                                <Label  FontAttributes="Bold" TextColor="#FFFFFFFF"
+                                    Text="Restoran"/>
+                            </StackLayout>
+                            <StackLayout >
+                                <Label  FontAttributes="Bold" TextColor="#FFFFFFFF"
+                                    Text="Vrsta jela"  />
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Grid.Column="1" Grid.Row="1" Margin="5">
+                            <StackLayout   >
+                                <Label  
+                                    Text="{Binding Naziv}" TextColor="#FFFFFFFF"/>
+                            </StackLayout>
+                            <StackLayout   >
+
+                                <Label 
+                                    Text="{Binding Opis}" TextColor="#FFFFFFFF" />
+                            </StackLayout>
+                            <StackLayout >
+                                <Label
+                                    Text="{Binding Restoran}" TextColor="#FFFFFFFF" />
+                            </StackLayout>
+
+                            <StackLayout >
+                                <Label
+                                    Text="{Binding Vrsta}" TextColor="#FFFFFFFF" />
+                            </StackLayout>
+
+
+                            <StackLayout>
+
+                                <Button x:Name="Naruci" Text="Naruči" Clicked="Naruci_Clicked" BackgroundColor="#FFFFFFFF"></Button>
+                            </StackLayout>
+                        </StackLayout>
+
+                    </Grid>
+                </StackLayout>
+                <StackLayout  HorizontalOptions="CenterAndExpand" >
+                    <Grid Padding="50,10,50,10" x:Name="gridnarudzba" IsVisible="False">
+                        <StackLayout Grid.Column="0" Grid.Row="0" Margin="5">
+                            <StackLayout   >
+                                <Picker x:Name="pickerm" 
+        Title="Odaberite velicinu jela" 
+  TitleColor="#FFFFFFFF"
+                                        FontAttributes="Bold"
+        ItemsSource="{Binding VelicinaList}"
+        ItemDisplayBinding="{Binding Naziv}"
+        SelectedItem="{Binding SelectedVelicina}" 
+                    SelectedIndexChanged="Pickerm_SelectedIndexChanged"/>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Grid.Column="1" Grid.Row="0">
+                            <StackLayout >
+                                <Label x:Name="cijenaVelicine" TextColor="#FFFFFFFF" Padding="0,30,0,0"></Label>
+                            </StackLayout>
+
+                        </StackLayout>
+                        <StackLayout Grid.Column="0" Grid.Row="1" Padding="0,10,0,0" >
+                            <StackLayout>
+                                <Label Text="Unesite količinu" TextColor="#FFFFFFFF" FontAttributes="Bold"/>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Grid.Column="1" Grid.Row="1" >
+                            <StackLayout>
+                                <Entry x:Name="inutKolicina" BackgroundColor="#FFFFFFFF" IsVisible="True" />
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Grid.Column="0" Grid.Row="2" >
+                            <StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Grid.Column="1" Grid.Row="2">
+
+                            <StackLayout>
+
+                                <Button x:Name="Dodaj" Text="Dodaj u narudžbu" Clicked="Dodaj_Clicked" BackgroundColor="#FFFFFFFF"></Button>
+                            </StackLayout>
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout BackgroundColor="#90000000" >
+                <StackLayout Padding="0,10,0,10" BackgroundColor="#90000000"  >
+                <Label Text="Preporučeni restorani" TextColor="#FFFFFFFF"  FontSize="Medium" FontAttributes="Bold"  HorizontalOptions="CenterAndExpand" ></Label>
+            </StackLayout>
+            <StackLayout BackgroundColor="#90000000" >
+            <ListView x:Name="MenuItemsListView"  >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout HorizontalOptions="CenterAndExpand" >
+                                            <Grid Padding="50,10,50,10" BackgroundColor="#90000000" >
+                                    <Image Grid.Column="0" Source="{Binding SlikaThumb, Converter={StaticResource imgConv}}" HorizontalOptions="CenterAndExpand" Aspect="AspectFit"></Image>
+
+                                    <StackLayout Grid.Column="1">
+                                        <StackLayout   >
+                                            <Label  TextColor="#FFFFFFFF" 
+                                    Text="{Binding Naziv}" FontAttributes="Bold"  />
+                                        </StackLayout>
+                                        <StackLayout >
+                                            <Label
+                                    Text="{Binding Adresa}" TextColor="#FFFFFFFF"  />
+
+                                            <Label TextColor="#FFFFFFFF" 
+                                    Text="{Binding Telefon} "/>
+
+                                            <Label TextColor="#FFFFFFFF" 
+                                    Text="{Binding Mail}"/>
+
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Grid>
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+</StackLayout>
+        </StackLayout>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
